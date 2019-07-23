@@ -1,184 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Dwi Agustianto">
+
     <title>DewaCoding</title>
-    <link rel="shorcut icon" href="assets/images/favicon.ico"/>
+    <link rel="shorcut icon" href="assets/images/favicon.ico" />
 
     <!-- CSS Links -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/animate.css"/>
-    <link rel="stylesheet" href="assets/css/app.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+        integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/app.css" />
 
-    <style>
-
-.dewasite-logo{
-    position: absolute;
-    right: 50px;
-    top: 50px;
-    height: 100vh;
-    z-index: 400;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-}
-
-.box-animate{
-	width: 300px;
-	height: 300px;
-}
-
-.box-animate img{
-	position: absolute;
-	width: 300px;
-}
-.nav-bg-transparent{
-    background-color: transparent!important;
-    transition: background-color 0.3s ease-out;
-    box-shadow: none
-}
-.nav-bg{
-    background-color: #fdfdfd!important;
-    transition: background-color 0.3s ease-out;
-    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-}
-.nav-bg ul li .link{
-    color: #636e72 !important;
-}
-@keyframes l-animate-three{
-	0%,50%{
-    	-webkit-transform:translateY(0);
-    	transform:translateY(0) rotate(-45deg);
-    	-webkit-animation-timing-function:cubic-bezier(.2,.25,.55,1);
-    	animation-timing-function:cubic-bezier(.2,.25,.55,1)
-    }
-    25%{
-        -webkit-transform:translateY(-7px);
-        transform:translateY(-7px) rotate(-45deg);
-        -webkit-animation-timing-function:cubic-bezier(.45,0,.8,.75);
-        animation-timing-function:cubic-bezier(.45,0,.8,.75);
-	}
-    75%{
-    	-webkit-transform:translateY(7px);
-        transform:translateY(7px) rotate(-45deg);
-    	-webkit-animation-timing-function:cubic-bezier(.45,0,.8,.75);
-    	animation-timing-function:cubic-bezier(.45,0,.8,.75)
-    }
-    to{
-    	-webkit-transform:translateY(0);
-    	transform:translateY(0) rotate(-45deg);
-    }
-}
-@keyframes l-animate-two{
-	0%,50%{
-    	-webkit-transform:translateY(0);
-    	transform:translateY(0) rotate(45deg);
-    	-webkit-animation-timing-function:cubic-bezier(.2,.25,.55,1);
-    	animation-timing-function:cubic-bezier(.2,.25,.55,1)
-    }
-    25%{
-        -webkit-transform:translateY(-7px);
-        transform:translateY(-7px) rotate(45deg);
-        -webkit-animation-timing-function:cubic-bezier(.45,0,.8,.75);
-        animation-timing-function:cubic-bezier(.45,0,.8,.75);
-	}
-    75%{
-    	-webkit-transform:translateY(7px);
-        transform:translateY(7px) rotate(45deg);
-    	-webkit-animation-timing-function:cubic-bezier(.45,0,.8,.75);
-    	animation-timing-function:cubic-bezier(.45,0,.8,.75)
-    }
-    to{
-    	-webkit-transform:translateY(0);
-    	transform:translateY(0) rotate(45deg);
-    }
-}
-@keyframes l-animate-one{
-	0%, 50%{	
-    	-webkit-transform:translateX(0);
-    	transform:translateX(0) rotate(90deg);
-    	-webkit-animation-timing-function:cubic-bezier(.2,.25,.55,1);
-        animation-timing-function:cubic-bezier(.2,.25,.55,1);
-    }
-    25%{
-        -webkit-transform:translateX(-7px);
-        transform:translateX(-7px) rotate(90deg);
-        -webkit-animation-timing-function:cubic-bezier(.45,0,.8,.75);
-        animation-timing-function:cubic-bezier(.45,0,.8,.75);
-	}
-    75%{
-    	-webkit-transform:translateX(7px);
-    	transform:translateX(7px) rotate(90deg);
-    	-webkit-animation-timing-function:cubic-bezier(.45,0,.8,.75);
-    	animation-timing-function:cubic-bezier(.45,0,.8,.75)
-    }
-    to{
-    	-webkit-transform:translateX(0);
-        transform:translateX(0) rotate(90deg);
-    }
-}
-@keyframes animate-blur{
-	0%,50%{
-        filter: blur(100px)
-    }to{
-
-    }
-}
-.l-one, .l-two, .l-three{
-    position: absolute;
-}
-.l-one{
-    top: 100px;
-    left: -80px;
-    transform: rotate(90deg);
-    border-bottom: 50px solid #01569a;
-	/* border-left: 25px solid transparent; */
-	border-right: 50px solid transparent;
-	height: 0;
-    width: 190px;
-    animation: l-animate-one 3.5s ease infinite;
-}
-.l-two{
-    top: 50px;
-    transform: rotate(45deg);
-    border-bottom: 50px solid #3b98c7;
-    opacity: 0.9;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	height: 0;
-    width: 150px;
-    animation: l-animate-two 4s ease infinite;
-}
-.l-three{
-    top: calc(95px * 2);
-    transform: rotate(-45deg);
-    border-top: 50px solid #01569a;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	height: 0;
-    width: 150px;
-    animation: l-animate-three 3s ease infinite;
-}
-.right{
-	animation: animate-logo-2 3.5s ease infinite;
-}
-.top_1{
-	animation: animate-logo 4s ease infinite;
-}
-.top_2{
-	animation: animate-logo 2s ease infinite;
-}
-.bottom{
-	animation: animate-logo 3s ease infinite;
-}
-.box-animate{
-    /* background-color: grey; */
-    position: relative;
-    animation: animate-blur 5s ease;
-}
-    </style>
 </head>
 
 <body>
@@ -188,18 +25,19 @@
             <div class="navbrand">
                 <div class="box flex-1 flex-center">
                     <a href="index.html" class="flex flex-center">
-                        <img class="brand-logo" alt="DewaCoding Brand" src="assets/images/brand-white.png" onmousedown="return false"/>
-                    </a>                
+                        <img class="brand-logo" alt="DewaCoding Brand" src="assets/images/brand-white.png"
+                            onmousedown="return false" />
+                    </a>
                 </div>
                 <div class="box flex-0 flex-center">
                     <div class="btn-set">
                         <span class="social-media-group">
                             <a href="#" class="media-social-icon"><i class="fab fa-github"></i></a>
                             <a href="#" class="media-social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="media-social-icon"><i class="fab fa-linkedin-in"></i></a>  
+                            <a href="#" class="media-social-icon"><i class="fab fa-linkedin-in"></i></a>
                         </span>
                         <a href="#" class='btn-signin'>Sign In</a>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -220,7 +58,7 @@
             </li>
         </ul>
     </nav>
-    
+
     <section class="content slider-content">
         <div class="slider-container">
             <div class="wrapper">
@@ -230,9 +68,10 @@
                         <h2 class="title">DewaCoding</h2>
                         <p>The right place for people want to study websites</p>
                     </div>
-                    <a class="btn-start-project" href="#"><span>Start a project from scratch <i class="icon fas fa-pencil-alt"></i></span></a>
+                    <a class="btn-start-project" href="#">
+                        <span>Start a project from scratch <i class="icon fas fa-pencil-alt"></i></span>
+                    </a>
                 </div>
-                
             </div>
         </div>
         <div class="dewasite-logo">
@@ -240,14 +79,8 @@
                 <div class="l-one"></div>
                 <div class="l-three"></div>
                 <div class="l-two"></div>
-                
-
-                <!-- <img class="right" src="assets/images/split/right.png"/>
-                <img class="top_2" src="assets/images/split/top_2.png"/>
-                <img class="bottom" src="assets/images/split/bottom.png"/>
-                <img class="top_1" src="assets/images/split/top_1.png"/> -->
             </div>
-        </div>  
+        </div>
     </section>
     <section class="content new-product">
         <div class="wrapper">
@@ -255,11 +88,16 @@
             <div class="flex introduction-content">
                 <div class="col-50">
                     <div class="introduction">
-                        <p><strong>dewacoding</strong> is an editor platform based on cloud computing, with contents including tutorials and references relating to <span class="blue">HTML</span>, <span class="blue">CSS</span>, <span class="blue">Javascript</span>, and etc. </p>
+                        <p>
+                            <strong>dewacoding</strong> is an editor platform based on cloud computing, with contents
+                            including tutorials and references relating to <span class="blue">HTML</span>, <span
+                                class="blue">CSS</span>, <span class="blue">Javascript</span>, and etc. 
+                        </p>
                     </div>
                 </div>
                 <div class="col-50">
-                    <iframe width="520" height="345" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/JA15y03xd7w?autoplay=1">
+                    <iframe width="520" height="345" frameborder="0" allowfullscreen="allowfullscreen"
+                        src="https://www.youtube.com/embed/JA15y03xd7w?autoplay=1">
                     </iframe>
                 </div>
             </div>
@@ -274,10 +112,12 @@
                 <div class="col-25">
                     <div class="product-item rotate-1">
                         <div class="product-image">
-                            <img src="assets/images/cover_python_tutorialset.png" alt="product-1" onmousedown="return false"/>
+                            <img src="assets/images/cover_python_tutorialset.png" alt="product-1"
+                                onmousedown="return false" />
                         </div>
                         <h4 class="product-title">Phython</h4>
-                        <p class="product-description">Python is an interpreted high-level programming language for general-purpose programming.</p>
+                        <p class="product-description">Python is an interpreted high-level programming language for
+                            general-purpose programming.</p>
                         <a href="#" class="product-link">
                             <span class="btn-buy">Learn &rarr;</span>
                         </a>
@@ -286,10 +126,11 @@
                 <div class="col-25">
                     <div class="product-item rotate-2">
                         <div class="product-image">
-                            <img src="assets/images/html5_logo_big.jpg" alt="product-1" onmousedown="return false"/>
+                            <img src="assets/images/html5_logo_big.jpg" alt="product-1" onmousedown="return false" />
                         </div>
                         <h4 class="product-title">HTML 5</h4>
-                        <p class="product-description">HTML 5 is a markup language used for structuring and presenting content on the World Wide Web.</p>
+                        <p class="product-description">HTML 5 is a markup language used for structuring and presenting
+                            content on the World Wide Web.</p>
                         <a href="#" class="product-link">
                             <span class="btn-buy">Learn &rarr;</span>
                         </a>
@@ -298,10 +139,11 @@
                 <div class="col-25">
                     <div class="product-item rotate-3">
                         <div class="product-image">
-                            <img src="assets/images/php_logo_big.jpg" alt="t-shirt-1" onmousedown="return false"/>
+                            <img src="assets/images/php_logo_big.jpg" alt="t-shirt-1" onmousedown="return false" />
                         </div>
                         <h4 class="product-title">PHP</h4>
-                        <p class="product-description">PHP: Hypertext Preprocessor is a server-side scripting language designed for Web development.</p>
+                        <p class="product-description">PHP: Hypertext Preprocessor is a server-side scripting language
+                            designed for Web development.</p>
                         <a href="#" class="product-link">
                             <span class="btn-buy">Learn &rarr;</span>
                         </a>
@@ -310,10 +152,11 @@
                 <div class="col-25">
                     <div class="product-item rotate-4">
                         <div class="product-image">
-                            <img src="assets/images/logo-js.png" alt="dress-1" onmousedown="return false"/>
+                            <img src="assets/images/logo-js.png" alt="dress-1" onmousedown="return false" />
                         </div>
                         <h4 class="product-title">Javascript</h4>
-                        <p class="product-description">JavaScript, often abbreviated as JS, is a high-level, interpreted programming language.</p>
+                        <p class="product-description">JavaScript, often abbreviated as JS, is a high-level, interpreted
+                            programming language.</p>
                         <a href="#" class="product-link">
                             <span class="btn-buy">Learn &rarr;</span>
                         </a>
@@ -327,7 +170,8 @@
     <footer class="footer">
         <div class="wrapper flex">
             <div class="col-20">
-                <img src="assets/images/brand-white.png" alt="DewaCoding" class="footer-brand" onmousedown="return false;"/>
+                <img src="assets/images/brand-white.png" alt="DewaCoding" class="footer-brand"
+                    onmousedown="return false;" />
             </div>
             <div class="col-25">
                 <h4 class="footer-title">Tools &amp; Apps</h4>
@@ -355,7 +199,6 @@
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
-
         </div>
         <div class="wrapper">
             <p class="copyright">Copyright &copy; 2018 <strong>DewaCoding</strong>. All Rights Reserved.</p>
@@ -365,4 +208,5 @@
 <script>
 
 </script>
+
 </html>
