@@ -1,0 +1,697 @@
+// Created By :
+// Agus - Leonardo - Kris - Kyky
+$white-color: #ffffff
+*
+    padding: 0
+    margin: 0
+@mixin scrollbars($size, $foreground-color, $hover-color, $background-color: mix($foreground-color, black, 20%)) 
+    ::-webkit-scrollbar 
+        width:  $size
+        height: $size
+        padding: 10px !important
+        transition: all 0.4s ease-out
+
+    ::-webkit-scrollbar-thumb 
+        background: $foreground-color
+        transition: all 0.4s ease-out
+        border-radius: 10px
+        width: 20px
+
+    ::-webkit-scrollbar-thumb:hover
+        background: $hover-color
+        transition: all 0.4s ease-out
+
+    ::-webkit-scrollbar-track
+        background: $background-color
+        padding: 10px
+        width: 20px
+        padding: 10px !important
+
+    // For Internet Explorer
+    body
+        scrollbar-face-color: $foreground-color
+        scrollbar-track-color: $background-color
+  
+@include scrollbars(.4em, rgba(41, 128, 185,1.0) ,rgba(41, 128, 185,0.7))
+body
+    background-color: $white-color
+    font-family: medium-content-sans-serif-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif
+    letter-spacing: 0
+    font-weight: 400
+    font-style: normal
+    color: rgba(0,0,0,.84)
+    font-size: 14px
+    line-height: 1.5
+    overflow-y: scroll
+    width: 100%
+    overflow-x: hidden
+
+a
+    text-decoration: none
+.show
+    display: block
+.hide
+    display: none
+ul
+    list-style: none
+button
+    outline: none
+strong
+    font-weight: 500
+.col-25
+    width: 25%
+.col-20
+    width: 25%
+.col-50
+    width: 50%
+.flex
+    display: flex
+    align-content: stretch
+.flex-center
+    align-items: center
+.wrapper
+    width: calc(100% - 100px)
+    margin: 0 auto
+    max-width: 1000px!important
+.btn-set
+    display: flex
+    align-items: center
+.flex-1
+    -webkit-box-flex: 1
+    -webkit-flex: 1 1 auto
+    -ms-flex: 1 1 auto
+    flex: 1 1 auto
+.flex-0
+    -webkit-box-flex: 0
+    -webkit-flex: 0 0 auto
+    -ms-flex: 0 0 auto
+    flex: 0 0 auto
+.flex-center
+    display: -webkit-box!important
+    display: -webkit-flex!important
+    display: -ms-flexbox!important
+    display: flex!important
+    -webkit-box-align: center!important
+    -webkit-align-items: center!important
+    -ms-flex-align: center!important
+    align-items: center!important
+.btn-signin
+    color: #ced6e0
+    line-height: 35px
+    font-size: 16px
+    padding: 4px 15px
+    border: 1px solid #ced6e0
+    -webkit-border-radius: 4px
+    border-radius: 4px
+    transition: all 0.2s ease-out
+    align-items: center
+    margin-left: 10px
+
+.btn-signin:hover
+    border-color: #f1f2f6
+    color: #f1f2f6
+.sup-required
+    color: red
+.header
+    padding: 20px 0
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.6)
+    z-index: 99999999
+    position: relative
+
+    .navbrand
+        height: 60px
+        display: flex
+        padding-top: 10px
+        color: #ebebeb !important
+        position: relative
+    .header-title
+        padding: 0 10px
+        font-weight: 300
+        color: white
+    .brand-logo
+        max-height: 40px
+        outline: none
+    .media-social-icon
+        color: #ced6e0
+        line-height: 35px
+        padding: 11px 4px
+        font-size: 20px
+        transition: color .3s ease-out
+        align-items: center
+
+    .media-social-icon:hover
+        color: #ffffff
+
+
+.navigation
+    background-color: rgba(0, 0, 0, 0.6)
+    position: -webkit-sticky
+    position: sticky
+    top: 0px
+    z-index: 999
+    ul
+        display: flex
+        li:first-child
+            a
+                padding: 10px 10px 10px 0px
+        li
+            list-style: none
+            .link
+                color: #b4b4b4
+                padding: 10px 10px 10px 10px
+                cursor: pointer
+                text-decoration: none
+                display: block
+                font-size: 14px!important
+                letter-spacing: 0
+                font-weight: 300
+                font-style: normal!important
+                text-transform: uppercase!important
+                white-space: nowrap!important
+                transition: all 0.2s ease-out
+            .active
+                color: #0091EA!important
+                .arrow
+                    display: inline-block
+                    width: 0
+                    height: 0
+                    margin-left: 5px
+                    vertical-align: middle
+                    border-top: 4px dashed
+                    border-top: 4px solid \9
+                    border-right: 4px solid transparent
+                    border-left: 4px solid transparent
+                    transform: rotate(-180deg)
+            .active:hover
+                color: #0091EA!important
+            .link:hover
+                color: white
+        .dropdown-menu
+            z-index: 1500
+            position: relative
+            .arrow
+                display: inline-block
+                width: 0
+                height: 0
+                margin-left: 5px
+                vertical-align: middle
+                border-top: 4px dashed
+                border-top: 4px solid \9
+                border-right: 4px solid transparent
+                border-left: 4px solid transparent
+
+        .dropdown-list
+            position: absolute
+            z-index: -1
+            display: none
+            width: 100%
+            text-align: left
+            list-style: none
+            background-color: rgba(0,0,0, 0.6)
+            border-radius: 5px
+            border-top-left-radius: 0px
+            border-top-right-radius: 0px
+            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
+        
+
+        .dropdown-menu:hover > .dropdown-list, .dropdown-menu:focus > .dropdown-list
+            animation: dropdownAnimate 0.4s ease-out
+            display: block
+
+// slider
+.slider-container:before
+    background: url('../images/bg.jpg') no-repeat
+    background-size: 100% 100vh
+    position: fixed
+    overflow: hidden
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    height: 100vh
+    content: ""
+    z-index: -1
+.slider-container:after
+    background: rgba(0,0,0, .5)
+    // background: linear-gradient(45deg, black, rgba(41, 128, 185,0.7))
+    background: linear-gradient(30deg, #000000, rgba(10, 41, 99, 0.8))
+    position: absolute
+    overflow: hidden
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    // height: 100vh
+    content: ""
+    // z-index: 5
+
+@keyframes typing 
+    from
+        width: 0 
+    to
+        width: 190px
+
+
+@keyframes blink-caret 
+    from, to
+        border-color: transparent
+    50%
+        border-color: #34495e
+
+.slider-container
+    // background: #000
+    max-height: calc(100vh - 151px)
+    // position: absolute
+    width: 100%
+    height: calc(100vh - 151px)
+    overflow: hidden
+
+    .btn-start-project:after
+        content: ""
+        color: white
+        width: 0%
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        background-color: #34495e
+        position: absolute
+        z-index: -1
+
+    .btn-start-project
+        z-index: 99
+        position: relative
+        padding: 10px 20px
+        bottom: 0
+        border-radius: 10px
+        border: 1px solid #0091EA
+        color: #0091EA
+        cursor: pointer
+        overflow: hidden
+        animation: fadeIn 2s ease-out
+        transition: color 0.5s
+        transition-timing-function: cubic-bezier(0.1, 1.0, 0.6, 0.1)
+        .icon
+            margin-left: 5px
+    .btn-start-project span:before
+        content: ""
+        color: white
+        width: 0%
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        background-color: #0091EA
+        position: absolute
+        z-index: -1
+        transition: width 0.5s
+        color: white
+        transition-timing-function: cubic-bezier(0.1, .8, 0.6, 0.1)
+    .btn-start-project:hover
+        color: white
+
+    .btn-start-project:hover span:before
+        width: 100%
+
+    .btn-start-project:hover .icon
+        transform: rotate(360deg)
+        transition: transform 0.5s 
+        transition-timing-function: cubic-bezier(0.1, 0.3, 0.6, 0.1)
+    .slider
+        z-index: -1
+        img
+            width: 100%
+            animation: fade 10s infinite
+    .slider-caption
+        margin-top: 10%
+        position: absolute
+        z-index: 10
+        width: 100%
+        .subtitle
+            content: "test"!important
+            font-size: 20px
+            font-weight: 200
+            animation: dropdownAnimate 0.5s ease-out
+            color: #0091EA
+            margin: 0px 0
+        .title
+            width: 190px
+            // background-color: red
+            font-size: 35px
+            font-weight: 300
+            color: #0091EA
+            margin: 10px 0
+            overflow: hidden
+            border-right: 2px solid #0091EA
+            white-space: nowrap
+            animation: fadeIn 2s ease-out, typing 2s steps(12, end), blink-caret .75s step-end infinite
+        p
+            width: 49%
+            font-size: 20px
+            line-height: 28px
+            font-weight: 100
+            text-align: left
+            color: #ecf0f1
+            animation: fadeIn 3s ease-out
+            margin-bottom: 40px
+        
+.content
+    
+    .content-title
+        text-align: center
+        font-weight: 300
+        font-size: 35px
+        padding: 20px 0
+    .content-title:not(:first-child)
+        padding-top: 80px
+    .introduction-content
+        padding: 20px 0
+        .introduction
+            display: flex
+            align-items: center
+            font-size: 25px
+            line-height: 1.5
+            height: 100%
+            font-weight: 300
+            p
+                padding-right: 50px
+                .blue
+                    color: rgba(52, 152, 219,1.0)
+    
+.new-product, .our-product
+    background-color: #fafafa
+    display: block
+    overflow: hidden
+    width: 100%
+    padding: 40px 0
+
+.our-product
+    .product-item
+        margin: 20px
+        img
+            height: 225px
+.product-item
+    background-color: $white-color
+    padding: 10px
+    border-radius: 10px
+    margin: 5px
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
+    position: relative
+    overflow: hidden
+    transition: all 0.4s ease-out
+
+    .product-image
+        img
+            width: 100%
+            border-radius: 5px
+            
+    .product-title
+        font-size: 20px
+        font-weight: 400
+
+    .product-description
+        color: rgba(0,0,0, .6)
+    .product-link
+        position: absolute
+        opacity: 0
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: rgba(41, 128, 185,.4)
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: opacity 0.4s ease-in-out
+        .btn-buy
+            border: solid 1px $white-color
+            padding: 10px
+            color: $white-color
+            border-radius: 5px
+    &:hover > .product-link
+        opacity: 1
+    &:hover > .product-image, &:hover > .product-title, &:hover > .product-description, &:hover > .product-color, &:hover > .product-size, &:hover > .product-material
+        filter: blur(20px)
+        transition: filter 0.4s cubic-bezier(0.1, 1.6, 0.65, 0.1)
+    .product-color
+        display: flex
+        align-items: center
+        .color-label
+            align-items: center
+            font-size: 12px
+            margin-right: 5px
+            color: rgba(0,0,0, .6)
+        .color
+            height: 10px
+            width: 10px
+            border: 1px solid #ebebeb
+            align-items: center
+            border-radius: 2px
+            margin: 1px
+            display: inline-block
+        .blue
+            background-color: #2980b9
+        .red
+            background-color: #c0392b
+        .black
+            background-color: #2c3e50
+        .yellow
+            background-color: #f1c40f
+        .white
+            background-color: #ecf0f1
+    .product-size
+        display: flex
+        align-items: center
+        .size-label
+            align-items: center
+            font-size: 12px
+            margin-right: 5px
+            color: rgba(0,0,0, .6)
+        .size
+            font-size: 12px
+    .product-material
+        display: flex
+        align-items: center
+        .material-label
+            align-items: center
+            font-size: 12px
+            margin-right: 5px
+            color: rgba(0,0,0, .6)
+        .material
+            font-size: 12px
+    .color-label span, .size-label span, .material-label span
+        width: 70px
+        display: inline-block
+        
+.footer
+    padding: 40px 0 10px 0
+    font-weight: 300
+    background-color: #282828
+
+    .footer-brand
+        min-width: 100px
+        max-width: 70%
+
+    .footer-title
+        font-size: 20px
+        text-align: left
+        color: white
+        font-weight: 300
+        margin-bottom: 10px
+        user-select: none
+    ul
+        li
+            a
+                padding: 5px 0
+                display: block
+                font-weight: 300
+                color: #b4b4b4
+                &:hover
+                    color: white
+    
+    .copyright
+        padding: 10px 0
+        width: 100%
+        display: block
+        margin-top: 20px
+        user-select: none
+        color: #b4b4b4
+        strong
+            color: white
+.form-order
+    background-color: $white-color
+    padding: 10px
+.form-group
+    display: flex
+    flex-direction: column
+    margin: 0.5rem
+
+    .form-label
+        font-size: 14px
+        font-weight: 300
+        margin: 5px 0
+    .form-input, .number-input, .form-input-area
+        transition: all 250ms cubic-bezier(.27,.01,.38,1.06),border 250ms cubic-bezier(.27,.01,.38,1.06)
+        border-radius: .25rem
+        border: 1px solid #dadada
+        background: #fff
+        font-size: 14px
+        font-weight: 400
+        color: #495057
+        padding: .4375rem .75rem
+        will-change: border-color,box-shadow
+        background-clip: padding-box
+        box-shadow: none
+    .form-input, .number-input
+        border-top: 1px solid #c0c0c0
+        letter-spacing: .3px
+    .disabled
+        background-color: #dfe6e9 !important
+        user-select: none
+        pointer-events: none
+        color: #636e72
+        transition: all 0.4s ease-out
+        cursor: not-allowed !important
+    .form-input:focus, .number-input:focus, .form-input-area:focus, select:focus
+        border-color: #e84393
+        -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3)
+        -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3)
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.3)  
+        outline: none
+    
+    .form-input-area
+        margin-left: 0
+        max-height: 150px
+        height: 80px
+        min-height: 80px
+        max-width: calc(100% - 1.6rem)
+        min-width: calc(100% - 1.6rem)
+    .form-check
+        margin-right: 10px
+    .form-check + label
+        cursor: pointer
+        user-select: none
+    .has-error
+        border-color: #dd4b39
+    select
+        height: 33px
+        border: 1px solid #dadada
+        font-size: 14px
+        cursor: pointer
+    .error-message
+        display: block
+        color: #dd4b39
+        line-height: 17px
+        font-size: 12px
+    .btn-order
+        padding: 10px 20px
+        cursor: pointer
+        color: #e84393
+        border: 1px solid #e84393
+        border-radius: 5px
+        transition: all 0.3s ease-out
+        text-transform: uppercase
+        margin: 10px 0
+        &:hover
+            background-color: #e84393
+            color: $white-color
+// Contact Section
+.contact
+    .contact-title
+        text-align: center
+        font-size: 35px
+        font-weight: 300
+    .quote
+        font-weight: 300
+        font-size: 20px
+        text-align: center
+        color: #e84393
+    .contact-list
+        display: flex
+        align-items: center
+        justify-content: center
+        .contact-item
+            padding: 10px 15px
+            color: #999999
+            &:hover
+                color: #e84393
+    .media-social
+        .social-icon
+            background-color: #ebebeb
+            border-radius: 50%
+            margin: 5px
+            overflow: hidden
+            transition: all 0.3s ease-out
+            &:hover
+                background-color: #bbbbbb
+            img
+                max-height: 40px
+@media only screen and (max-width: 500px)
+
+    .wrapper
+        width: calc(100% - 20px)
+        margin: 0 auto
+    .col-25, .col-20
+        width: 100%
+    .btn-start-project
+        position: absolute
+        padding: 10px 20px
+        bottom: 20px !important
+        right: 10px
+        left: 10px
+        text-align: center
+    .slider-caption
+        margin-top: 10%
+        position: absolute
+        text-align: center
+        .subtitle
+            font-size: 15px
+            font-weight: 200
+            animation: fadeIn 5s ease-out
+            color: #e84393
+            text-align: center
+            margin: 0
+        .title
+            font-size: 30px
+            font-weight: 300
+            animation: dropdownAnimate 5s ease-out
+            color: #e84393
+            margin: 0
+            text-align: center
+        p
+            display: none
+    .new-product, .our-product
+        .flex
+            flex-direction: column
+        .product-item
+            margin: 20px 0
+    .our-product
+        .product-item
+            margin: 10px
+            img
+                height: 300px !important
+    .navigation
+        display: flex
+        flex-direction: column
+        ul
+            display: flex
+            flex-direction: column
+            li
+                a
+                    text-align: center
+    .footer
+        text-align: center
+        align-items: center
+        .footer-brand
+            min-width: 100px
+            max-width: 50%
+            padding: 20px 0
+        .footer-title
+            text-align: center
+            margin-bottom: 5px
+            margin-top: 20px
+        .flex
+            flex-direction: column
