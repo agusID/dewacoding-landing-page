@@ -1,5 +1,5 @@
 // Created By :
-// Agus - Leonardo - Kris - Kyky
+// Dwi Agustianto
 $white-color: #ffffff
 *
     padding: 0
@@ -695,3 +695,158 @@ strong
             margin-top: 20px
         .flex
             flex-direction: column
+
+.dewasite-logo
+    position: absolute
+    right: 50px
+    top: 50px
+    height: 100vh
+    z-index: 400
+    bottom: 0
+    display: flex
+    align-items: center
+
+.box-animate
+	width: 300px
+	height: 300px
+
+.box-animate img
+	position: absolute
+	width: 300px
+
+.nav-bg-transparent
+    background-color: transparent!important
+    transition: background-color 0.3s ease-out
+    box-shadow: none
+
+.nav-bg
+    background-color: #fdfdfd!important
+    transition: background-color 0.3s ease-out
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
+
+.nav-bg ul li .link
+    color: #636e72 !important
+
+@keyframes l-animate-three
+    0%,50%
+        -webkit-transform: translateY(0)
+        transform: translateY(0) rotate(-45deg)
+        -webkit-animation-timing-function: cubic-bezier(.2,.25,.55,1)
+        animation-timing-function: cubic-bezier(.2,.25,.55,1)
+
+    25%
+        -webkit-transform: translateY(-7px)
+        transform: translateY(-7px) rotate(-45deg)
+        -webkit-animation-timing-function: cubic-bezier(.45,0,.8,.75)
+        animation-timing-function: cubic-bezier(.45,0,.8,.75)
+	
+    75%
+    	-webkit-transform: translateY(7px)
+        transform: translateY(7px) rotate(-45deg)
+    	-webkit-animation-timing-function: cubic-bezier(.45,0,.8,.75)
+    	animation-timing-function: cubic-bezier(.45,0,.8,.75)
+    
+    to
+    	-webkit-transform: translateY(0)
+    	transform: translateY(0) rotate(-45deg)
+
+@keyframes l-animate-two
+    0%,50%
+        -webkit-transform: translateY(0)
+        transform: translateY(0) rotate(45deg)
+        -webkit-animation-timing-function: cubic-bezier(.2,.25,.55,1)
+        animation-timing-function: cubic-bezier(.2,.25,.55,1)
+    
+    25%
+        -webkit-transform: translateY(-7px)
+        transform: translateY(-7px) rotate(45deg)
+        -webkit-animation-timing-function: cubic-bezier(.45,0,.8,.75)
+        animation-timing-function: cubic-bezier(.45,0,.8,.75)
+	
+    75%
+    	-webkit-transform: translateY(7px)
+        transform: translateY(7px) rotate(45deg)
+    	-webkit-animation-timing-function: cubic-bezier(.45,0,.8,.75)
+    	animation-timing-function: cubic-bezier(.45,0,.8,.75)
+    
+    to
+    	-webkit-transform: translateY(0)
+    	transform: translateY(0) rotate(45deg)
+
+@keyframes l-animate-one
+    0%, 50%	
+        -webkit-transform: translateX(0)
+        transform: translateX(0) rotate(90deg)
+        -webkit-animation-timing-function: cubic-bezier(.2,.25,.55,1)
+        animation-timing-function: cubic-bezier(.2,.25,.55,1)
+    
+    25%
+        -webkit-transform: translateX(-7px)
+        transform: translateX(-7px) rotate(90deg)
+        -webkit-animation-timing-function: cubic-bezier(.45,0,.8,.75)
+        animation-timing-function: cubic-bezier(.45,0,.8,.75)
+	
+    75%
+    	-webkit-transform: translateX(7px)
+    	transform: translateX(7px) rotate(90deg)
+    	-webkit-animation-timing-function: cubic-bezier(.45,0,.8,.75)
+    	animation-timing-function: cubic-bezier(.45,0,.8,.75)
+    
+    to
+    	-webkit-transform: translateX(0)
+        transform: translateX(0) rotate(90deg)
+
+@keyframes animate-blur
+    0%,50%
+        filter: blur(100px)
+    to
+
+.l-one, .l-two, .l-three
+    position: absolute
+
+.l-one
+    top: 100px
+    left: -80px
+    transform: rotate(90deg)
+    border-bottom: 50px solid #01569a
+    border-right: 50px solid transparent
+    height: 0
+    width: 190px
+    animation: l-animate-one 3.5s ease infinite
+
+.l-two
+    top: 50px
+    transform: rotate(45deg)
+    border-bottom: 50px solid #3b98c7
+    opacity: 0.9
+    border-left: 50px solid transparent
+    border-right: 50px solid transparent
+    height: 0
+    width: 150px
+    animation: l-animate-two 4s ease infinite
+
+.l-three
+    top: calc(95px * 2)
+    transform: rotate(-45deg)
+    border-top: 50px solid #01569a
+    border-left: 50px solid transparent
+    border-right: 50px solid transparent
+    height: 0
+    width: 150px
+    animation: l-animate-three 3s ease infinite
+
+.right
+	animation: animate-logo-2 3.5s ease infinite
+
+.top_1
+	animation: animate-logo 4s ease infinite
+
+.top_2
+	animation: animate-logo 2s ease infinite
+
+.bottom
+	animation: animate-logo 3s ease infinite
+
+.box-animate
+    position: relative
+    animation: animate-blur 5s ease
